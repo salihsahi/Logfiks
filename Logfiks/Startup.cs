@@ -40,6 +40,26 @@ namespace Logfiks
             services.AddScoped<IApiKullanicilariService, ApiKullanicilariManager>();
             services.AddScoped<IApiKullanicilariDal, EfApiKullanicilariDal>();
 
+            services.AddScoped<IYapisalOzellikService, YapisalOzellikManager>();
+            services.AddScoped<IYapisalOzellikDal, EfYapisalOzellikDal>();
+
+            services.AddScoped<IUlkeService, UlkeManager>();
+            services.AddScoped<IUlkeDal, EfUlkeDal>();
+
+            //services.AddScoped<ISehirService, SehirManager>();
+            //services.AddScoped<ISehirDal, EfSehirDal>();
+
+            services.AddScoped<IIlceService, IlceManager>();
+            services.AddScoped<IIlceDal, EfIlceDal>();
+
+            services.AddScoped<IKombinePaketTuruService, KombinePaketTuruManager>();
+            services.AddScoped<IKombinePaketTuruDal, EfKombinePaketTuruDal>();
+
+            services.AddScoped<ITekliPaketTuruService, TekliPaketTuruManager>();
+            services.AddScoped<ITekliPaketTuruDal, EfTekliPaketTuruDal>();
+
+            services.AddScoped<ISevkiyatTipiService, SevkiyatTipiManager>();
+            services.AddScoped<ISevkiyatTipiDal, EfSevkiyatTipiDal>();
 
 
             services.AddDistributedMemoryCache();
@@ -70,6 +90,7 @@ namespace Logfiks
 
                 app.UseWhen(x => (x.Request.Path.StartsWithSegments("/RestApi", StringComparison.OrdinalIgnoreCase)), builder => { builder.UseMiddleware<AuthenticationMiddleware>(); });
             }
+
 
 
 

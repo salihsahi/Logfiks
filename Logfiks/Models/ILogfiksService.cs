@@ -14,6 +14,33 @@ namespace Logfiks.Models
     public interface ILogfiksService
     {
         [OperationContract]
-        List<TasitTipi> TasitTipleri(TasitTipleriRequest s2);
+        List<TasitTipi> TasitTipleriGetir(TasitTipleriRequest s2);
+
+        [OperationContract]
+        List<YapisalOzellik> YapisalOzellikGetir(YapisalOzellikRequest s2);
+
+        [OperationContract]
+        List<Ulke> UlkeGetir(UlkeRequest s2);
+
+        /*
+        [OperationContract]
+        List<Sehir> SehirGetir(SehirRequest s2);
+        */
+
+        [OperationContract]
+        List<Ilce> IlceGetir(IlceRequest s2);
+
+
+        [OperationContract]
+        List<KombinePaketTuru> KombinePaketTuruGetir(KombinePaketTuruRequest s2);
+
+
+        [OperationContract]
+        List<TekliPaketTuru> TekliPaketTuruGetir(TekliPaketTuruRequest s2);
+
+
+        [OperationContract]
+        List<SevkiyatTipi> SevkiyatTipiGetir(SevkiyatTipiRequest s2);
+
     }
 }
