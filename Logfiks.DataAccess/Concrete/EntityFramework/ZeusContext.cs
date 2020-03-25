@@ -24,6 +24,7 @@ namespace Logfiks.DataAccess.Concrete.EntityFramework
 
 
 
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<TasitTipi>().ToTable("tasit_tipleri", "public");
